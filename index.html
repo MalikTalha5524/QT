@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QT-1 -Optipure Water</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Rubik+Iso&family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="shortcut icon" href="images/Screen-Shot-2017-10-02-at-1.43.37-PM-PhotoRoom.png-PhotoRoom.png" type="image/x-icon">
+    <style>
+      @import url(" https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&display=swap");
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans", arial, serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #818285;
+        font-weight: 400;
+      }
+
+      /* ============start subheader=============== */
+      .subheader {
+        width: 100%;
+        height: auto;
+        padding: 50px 10px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .sub1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .one{
+        width: 100%;
+      }
+      .sub1 h1 {
+        font-size: 42px;
+        line-height: 1.1;
+        color: rgb(17, 133, 168);
+        margin-bottom: 15px;
+        font-synthesis-weight: none;
+      }
+      .sub1 span {
+        font-size: 20px;
+        font-weight: 600;
+        color: rgb(91, 89, 89);
+      }
+      .sub1 p {
+        font-size: 18px;
+        padding: 20px 20px 20px 0px;
+        color: rgb(91, 89, 89);
+      }
+      .nsf {
+        font-size: 16px;
+        padding: 20px 20px 20px 0px;
+        color: rgb(91, 89, 89);
+      }
+      .sub1 h2 {
+        font-size: 22px;
+        color: rgb(17, 133, 168);
+      }
+      hr {
+        color: rgb(0, 0, 255);
+        width: 95%;
+        line-height: 10;
+        margin-bottom: 10px;
+      }
+      .sub1 p {
+        font-size: 16px;
+        color: rgb(91, 89, 89);
+      }
+      ul {
+        margin-left: 15px;
+      }
+      ul li {
+        font-size: 20px;
+        margin-top: 8px;
+      }
+      .sub1 a {
+        font-size: 12px;
+        background-color: rgb(17, 133, 168);
+        color: aliceblue;
+        text-decoration: none;
+        padding: 8px;
+        border-radius: 5px;
+      }
+      .sub1 a:hover {
+        background-color: #a9dfe1;
+        color: black;
+      }
+      .sub2 {
+        width: 100%;
+        height: auto;
+      }
+      .sub2 img {
+        width: 100%;
+        height: auto;
+        border: 1px solid rgb(200, 197, 197);
+        border-radius: 7px;
+      }
+      .five img{
+    width: 100%;
+        height: auto;
+        border: 1px solid rgb(200, 197, 197);
+        border-radius: 7px;
+  }
+      .show_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .show_button span {
+        display: flex;
+        width: 35%;
+        height: 46px;
+        font-size: 18px;
+        justify-content: center;
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(17, 133, 168);
+        margin-top: 40px;
+        color: aliceblue;
+        padding: 13px 28px;
+        cursor: pointer;
+      }
+
+      .show_button span:hover {
+        background-color: #a9dfe1;
+        color: black;
+        transition: all 0.3s ease;
+      }
+      .btn span:hover {
+        background-color: #a9dfe1;
+        color: black;
+        transition: all 0.3s ease;
+      }
+      .fa {
+        position: relative;
+        top: 6px;
+        left: 0px;
+        font-size: 14px;
+        display: none;
+      }
+      span:hover .fa {
+        display: block;
+        transition: all 0.5s ease;
+        left: 3px;
+      }
+      .btn a:hover .fa {
+        display: block;
+        transition: all 0.5s ease;
+        left: 3px;
+      }
+      .num span{
+        color:#669698; ;
+        font-size: 1rem;
+      }
+      /*========= start lorem container ==========*/
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+      }
+      .lorem-1 {
+        position: relative;
+        width: 33.33%;
+        overflow: hidden;
+      }
+      .lorem-1 img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .lorem-1 .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .lorem-1 h3 {
+        position: absolute;
+        bottom: 20%;
+        left: 20%;
+        color: #f5eaea;
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 1.5px 1px 3px black;
+        font-synthesis-weight: none;
+      }
+      .lorem-1 .btn {
+        background-color: rgb(17, 133, 168);
+        padding: 7px 22px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 2%;
+        left: 20%;
+      }
+      .lorem-1 .btn a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+      }
+      .btn a:hover {
+        /* background-color: #a9dfe1; */
+        color: black;
+        transition: all 0.2s ease;
+      }
+      .btn:hover .fa {
+        display: block;
+        transition: all 0.05s ease;
+        left: 3px;
+        top: 10px;
+      }
+      .lorem-1:hover .overlay {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      /* ==================================
+            start responsiv all media 
+        ================================== */
+      @media only screen and (min-width: 320px) and (max-width: 375px) {
+        /* CSS styles for large screens */
+        .subheader {
+    display: flex;
+    flex-direction: column;
+  }
+  .one {
+    order: 0;
+    width: 100%;
+  }
+  .two {
+    order: 3;
+    width: 100%;
+  }
+  .three {
+    order: 4;
+    width: 100%;
+  }
+  .four {
+    order: 5;
+    width: 100%;
+    
+  }
+  .five {
+    order: 1;
+    margin-top: 20px; /* adjust this value as needed */
+  }
+        .lorem-1 {
+          margin-top: 10%;
+          width: 100%;
+        }
+        .show_button span {
+          width: 54%;
+          padding: 10px 0px;
+        }
+        .lorem-1 h3 {
+          bottom: 26%;
+          left: 19%;
+        }
+        .lorem-1 .btn {
+          bottom: 6%;
+          left: 27%;
+          padding: 3px 22px;
+        }
+        .sub1  ul li{
+          display: flex;
+          justify-content: center;
+        }
+        .sub1 h2,p{
+          text-align: center;
+        }
+        .four a {
+          position: relative;
+          left: 85px;
+        }
+        .lorem-1 {
+   
+   width: 100%;
+   margin-bottom: 20px;
+}
+.overlay{
+          position: relative;
+        }
+        .lorem-1 h3{
+          left: 28%;
+          bottom: 60px;
+        }
+        .lorem-1 .btn{
+          left: 28%;
+        }
+        .sub2{
+    display: none;
+  }
+      }
+
+      @media only screen and (min-width: 375px) and (max-width: 420px) {
+        /* CSS styles for large screens */
+        .subheader {
+    display: flex;
+    flex-direction: column;
+  }
+  .one {
+    order: 0;
+    width: 100%;
+  }
+  .two {
+    order: 3;
+    width: 100%;
+  }
+  .three {
+    order: 4;
+    width: 100%;
+  }
+  .four {
+    order: 5;
+    width: 100%;
+    
+  }
+  .five {
+    order: 1;
+    margin-top: 20px; /* adjust this value as needed */
+  }
+        .lorem-1 {
+          margin-top: 10%;
+          width: 100%;
+        }
+        
+        .show_button span {
+          width: 40%;
+          padding: 9px 0px;
+        }
+        .lorem-1 h3 {
+          bottom: 26%;
+          left: 30%;
+        }
+        .lorem-1 .btn {
+          bottom: 6%;
+          left: 35%;
+        }
+        .sub1  ul li{
+          display: flex;
+          justify-content: center;
+        }
+        .sub1 h2,p{
+          text-align: center;
+        }
+        .four a {
+          position: relative;
+          left: 120px;
+        }
+        .lorem-1 {
+   
+   width: 100%;
+   margin-bottom: 20px;
+}
+        .sub2{
+    display: none;
+  }
+      }
+
+      @media only screen and (min-width: 420px) and (max-width: 570px) {
+        /* CSS styles for large screens */
+        .subheader {
+    display: flex;
+    flex-direction: column;
+  }
+  .one {
+    order: 0;
+    width: 100%;
+  }
+  .two {
+    order: 3;
+    width: 100%;
+  }
+  .three {
+    order: 4;
+    width: 100%;
+  }
+  .four {
+    order: 5;
+    width: 100%;
+    
+  }
+  .five {
+    order: 1;
+    margin-top: 20px; /* adjust this value as needed */
+  }
+        .lorem-1 {
+          margin-top: 10%;
+          width: 100%;
+        }
+        .lorem-1 h3{
+          left: 25%;
+          bottom: 60px;
+        }
+        .lorem-1 .btn{
+          left: 25%;
+        }
+        .show_button span {
+          width: 36%;
+          height: 43px;
+          font-size: 17px;
+          margin-top: 39px;
+          padding: 9px 10px;
+        }
+        
+        .sub1  ul li{
+          display: flex;
+          justify-content: center;
+        }
+        .sub1 h2,p{
+          text-align: center;
+        }
+        .four a {
+          position: relative;
+          left: 120px;
+        }
+        .lorem-1 {
+   
+   width: 100%;
+   margin-bottom: 20px;
+}
+        .sub2{
+    display: none;
+  }
+      }
+
+      /* Small screens, such as mobile devices */
+      @media only screen and (min-width: 571px) and (max-width: 767px) {
+        /* CSS styles for small screens */
+        .subheader {
+    display: flex;
+    flex-direction: column;
+  }
+  .one {
+    order: 0;
+    width: 100%;
+  }
+  .two {
+    order: 3;
+    width: 100%;
+  }
+  .three {
+    order: 4;
+    width: 100%;
+  }
+  .four {
+    order: 5;
+    width: 100%;
+    
+  }
+  .five {
+    order: 1;
+    margin-top: 20px; /* adjust this value as needed */
+  }
+  
+  /* .subheader{
+    display: flex;
+    flex-direction: column;
+  } */
+  .sub1{
+    display: flex;
+    flex-direction: column;
+  }
+  .lorem-1 {
+   
+    width: 100%;
+    margin-bottom: 20px;
+}
+.overlay{
+          position: relative;
+        }
+        .overlay h3{
+          left: 20px;
+          bottom: 60px;
+        }
+        .overlay .btn{
+          left: 20px;
+        }
+  .sub2{
+    display: none;
+  }
+      }
+
+      /* Medium screens, such as tablets */
+      @media only screen and (min-width: 768px) and (max-width: 992px) {
+        /* CSS styles for medium screens */
+        .show_button span {
+          width: 50%;
+          height: 40px;
+          padding: 10px 28px;
+        }
+        .subheader {
+          padding: 20px 20px;
+        }
+        .lorem-1 h3 {
+          bottom: 28%;
+          left: 14%;
+        }
+        .lorem-1 .btn {
+          padding: 2px 16px;
+        }
+        .five{
+          display: none;
+        }
+      }
+      /* Large screens, such as laptops */
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        /* CSS styles for large screens */
+        .show_button span {
+          width: 43%;
+          height: 40px;
+          padding: 10px 28px;
+        }
+        .five{
+          display: none;
+        }
+      }
+      /* Extra large screens, such as desktops */
+      @media only screen and (min-width: 1199px) {
+        /* CSS styles for extra large screens */
+        .show_button span {
+          width: 42%;
+          height: 40px;
+          padding: 10px 28px;
+        }
+        .subheader {
+          padding: 40px 100px;
+        }
+        .five{
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="mainheader">
+      <div class="subheader">
+        <div class="sub1">
+          <div class="one">
+          <h1>QT-1</h1>
+          <span>Part # 160-52010</span>
+          <p>
+            The <span>QT-1</span>  is a single-cartridge water treatment system with a 15”
+            Qwik-Twist cartridge that reduces sediment down to 0.5-microns and
+            reduces chlorine, taste & odor at a flow rate of 2.25 gpm for
+            22,500-gallons.
+          </p>
+          <p class="nsf">NSF Certified under Standard 42</p>
+        </div>
+          <hr/>
+          <div class="two">
+          <h2>Applications</h2>
+             <p>FOUNTAIN BEVERAGES – single carbonator.</p>
+             <p>COFFEE & TEA – Applications where water hardness is not a problem.</p>
+             <p>DRINKING WATER</p>
+            </div>
+            <div class="three">
+          <h2>Replacement Cartridges</h2>
+           <ul>
+               <li class="num">* <span > 300-05830 – CTO-Q </span> (1 required)</li>
+           </ul>
+          </div>
+          <div class="four">
+          <h2>Downloads</h2>
+           <br/>
+             <a href="">Spec Sheet</a>
+             <a href="">Manual</a>
+        </div>
+        <div class="five">
+        <img src="images/160-52010_QT-1_R1.jpg" alt="" />
+        <div class="show_button">
+          <span>Where to Buy <i class="fa fa-arrow-right"></i></span>
+        </div>
+      </div>
+      </div>
+        <div class="sub2">
+          <img src="images/160-52010_QT-1_R1.jpg" alt="" />
+        <div class="show_button">
+          <span>Where to Buy <i class="fa fa-arrow-right"></i></span>
+        </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="lorem-1">
+        <img src="images/solutions_resources.jpg" alt="" />
+        <div class="overlay">
+          <h3>Resources</h3>
+          <div class="btn">
+            <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="lorem-1">
+        <img src="images/hm_solutions_selector.jpg" alt="" />
+        <div class="overlay">
+          <h3>Product Selector</h3>
+          <div class="btn">
+            <a href="">Search Now <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="lorem-1">
+        <img src="images/solutions_distributor.jpg" alt="" />
+        <div class="overlay">
+          <h3>For More Info</h3>
+          <div class="btn">
+            <a href="">Find Now <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
